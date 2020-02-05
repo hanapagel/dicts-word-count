@@ -1,16 +1,20 @@
 # put your code here.
 # input_file = open("test.txt")
-
+import pdb
 
 def count_words(input_file):
-    '''Print a dictionary with list of words and word count.'''
-    input_file = open(input_file)
-    all_words = []
-    for line in input_file:
-        sentence = line.lower()
-        sentence = sentence.split(" ")
-        sentence[-1] = sentence[-1][:-1]
-        all_words = all_words + sentence
+    '''Takes a text file as a string. Prints a dictionary of words and word count.'''
+
+    contents = open(input_file).read()
+    all_words = contents.split()
+
+    # input_file = open(input_file)
+    # all_words = []
+    # for line in input_file:
+    #     sentence = line.lower()
+    #     sentence = sentence.split(" ")
+    #     sentence[-1] = sentence[-1][:-1]
+    #     all_words = all_words + sentence
 
     word_dict = {}
 
